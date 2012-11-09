@@ -18,8 +18,12 @@ When /^I press "([^"]*)"$/ do |button|
   click_button(button)
 end
 
-Then /^I should see "([^"]*)"$/ do |text|
-  page.should have_content(text)
+Then /^I should( not)? see "([^"]*)"$/ do |not_see, text|
+  if not_see
+    page.should_not have_content(text)
+  else
+    page.should have_content(text)
+  end
 end
 
 Then /^(?:|I )should be on (.+)$/ do |page_name|
