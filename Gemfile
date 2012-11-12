@@ -18,7 +18,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
