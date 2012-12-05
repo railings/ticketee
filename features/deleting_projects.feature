@@ -10,4 +10,3 @@ Feature:
     And I follow "Delete Project"
     Then I should see "Project has been deleted."
     And I should not see "TextMate 2"
-  
