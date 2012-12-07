@@ -2,10 +2,16 @@ Given /^there are the following users:$/ do |table|
   # table is a | user@ticketee.com | password |pending
   table.hashes.each do |attributes|
     unconfirmed = attributes.delete("unconfirmed") == "true"
+    admin = attributes.delete("admin") == "true"
     @user = User.create!(attributes)
     @user.confirm! unless unconfirmed
+    if admin
+      @user.admin = true
+      @user.save!
+    end
   end
 end
+
 Given /^I am signed in as them$/ do
   steps (%Q{
     Given I am on the homepage
