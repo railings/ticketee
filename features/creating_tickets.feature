@@ -5,10 +5,11 @@ Feature:
 
   Background:
     Given there is a project called "Internet Explorer"
-    Given there are the following users:
+    And there are the following users:
       | email             | password |
       | user@ticketee.com | password |
     And "user@ticketee.com" can view the "Internet Explorer" project
+    And "user@ticketee.com" can create tickets in the "Internet Explorer" project
     And I am signed in as them
     When I follow "Internet Explorer"
     And I follow "New Ticket"
