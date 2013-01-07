@@ -36,3 +36,4 @@ Feature:
     And I press "Create comment"
     Then I should see "Comment has been created."
     And I should see "Open" within "#ticket .state"
+    And I should see "Open" within "#comments"
