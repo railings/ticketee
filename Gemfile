@@ -14,6 +14,7 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
+  gem 'factory_girl'
   gem 'rspec-rails'
 end
 
@@ -21,7 +22,6 @@ group :test do
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl'
   gem 'email_spec'
   gem 'launchy'
 end
